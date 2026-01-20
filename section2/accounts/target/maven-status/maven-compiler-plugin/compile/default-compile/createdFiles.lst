@@ -1,2 +1,8 @@
-com\eazybytes\accounts\controllers\hellowrld.class
+com\eazybytes\accounts\entity\BaseEntity.class
+com\eazybytes\accounts\entity\Accounts.class
+com\eazybytes\accounts\entity\customer.class
+com\eazybytes\accounts\controllers\AccountsController.class
+com\eazybytes\accounts\dto\AccountsDto.class
 com\eazybytes\accounts\AccountsApplication.class
+com\eazybytes\accounts\repository\customerRepo.class
+com\eazybytes\accounts\repository\accountsRepo.class
