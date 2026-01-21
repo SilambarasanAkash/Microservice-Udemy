@@ -12,7 +12,7 @@ public class Accounts extends BaseEntity {
 
     @Id
     @Column(name = "account_number")
-    public Integer accountNumber;
+    public long accountNumber;
 
     @Column(name = "customer_id")
     public long customerID;

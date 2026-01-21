@@ -1,0 +1,30 @@
+package com.eazybytes.accounts.exception;
+
+import com.eazybytes.accounts.dto.ErrorResponceDto;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.context.request.WebRequest;
+
+import java.time.LocalDateTime;
+
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+
+    public ResponseEntity<ErrorResponceDto> handleCustomerAlreadyExistException(customerAlreadyExistException exception, WebRequest webRequest){
+
+        ErrorResponceDto errorResponceDto=new ErrorResponceDto(
+                webRequest.getDescription(false),
+                HttpStatus.BAD_REQUEST,
+                exception.getMessage(),
+                LocalDateTime.now()
+        );
+
+        return new ResponseEntity<>(errorResponceDto.getErrorCode());
+    }
+
+
+}
