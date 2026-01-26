@@ -10,4 +10,10 @@ public interface IAccountsService {
      */
     void createAccount(customerDto customerDto);
 
+    customerDto fetchCustomer(String mobileNumber) throws Throwable;
+
+    boolean updateAccount(customerDto customerDto);
+
+    boolean deleteAccount(String mobileNumber);
+
 }

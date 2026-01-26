@@ -2,11 +2,14 @@ package com.eazybytes.accounts.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.boot.actuate.endpoint.annotation.EndpointExtension;
 
-@Data
+
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "customer")
+@Data
 public class customer extends BaseEntity {
 
 
