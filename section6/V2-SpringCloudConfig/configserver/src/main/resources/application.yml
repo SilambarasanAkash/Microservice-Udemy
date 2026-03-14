@@ -1,2 +1,32 @@
-server :
-  port : 8071
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud :
+    config:
+      server:
+        git :
+          uri: "https://github.com/SilambarasanAkash/MicroServiceConfigFiles.git"
+          default-label: main
+          timeout: 5
+          #that we need to mention is,
+          #clone-on-start.
+          #Start with the value
+          #true.
+          #With this property I'm telling to my config server.
+          #Please try to clone the GitHub repo into local system during the startup itself.
+          clone-on-start: true
+
+          # We are telling to override all the local changes whenever you are trying to start or restart your config server.
+          #This will make sure your config server always reading the properties from the master location which is GitHub repo.
+          force-pull: true
+#        native:
+#          search-location: "classpath:/config"
+#           search-location: "file:///D://Learn Microservice in Udemy//GitCode//section6//ConfigFiles//"
+
+server:
+  port: 8071
+
+encrypt:
+  key : "235cc9d985326f61d4cc82500ef066c7"

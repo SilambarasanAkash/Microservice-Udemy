@@ -12,6 +12,7 @@ com\eazybytes\accounts\services\AccountsServiceImpl.class
 com\eazybytes\accounts\exception\customerAlreadyExistException.class
 com\eazybytes\accounts\Constants\AccountsConstant.class
 com\eazybytes\accounts\services\IAccountsService.class
+com\eazybytes\accounts\dto\AccountsContactInfoDto.class
 com\eazybytes\accounts\entity\customer.class
 com\eazybytes\accounts\dto\ErrorResponceDto.class
 com\eazybytes\accounts\mapper\AccountsMapper.class
